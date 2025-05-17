@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <RootNamespace>OS_page_replacement_project</RootNamespace>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="MainProject\Models\" />
+    <Folder Include="MainProject\Algorithms\" />
+    <Folder Include="MainProject\Tests\" />
+    <Folder Include="MainProject\Services\" />
+    <Folder Include="MainProject\UI\Controls\" />
+    <Folder Include="MainProject\UI\Resources\" />
+    <Folder Include="MainProject\Utils\" />
+  </ItemGroup>
+
+</Project>
