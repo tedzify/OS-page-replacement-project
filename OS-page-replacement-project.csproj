@@ -10,13 +10,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="MainProject\Models\" />
-    <Folder Include="MainProject\Algorithms\" />
-    <Folder Include="MainProject\Tests\" />
-    <Folder Include="MainProject\Services\" />
-    <Folder Include="MainProject\UI\Controls\" />
-    <Folder Include="MainProject\UI\Resources\" />
-    <Folder Include="MainProject\Utils\" />
+    <Folder Include="PageReplacement.Core\Algorithms\" />
+    <Folder Include="PageReplacement.Core\Interfaces\" />
+    <Folder Include="PageReplacement.Core\Models\" />
+    <Folder Include="PageReplacement.Core\Utilities\" />
+    <Folder Include="PageReplacement.Tests\" />
+    <Folder Include="PageReplacement.UI\Controls\" />
+    <Folder Include="PageReplacement.UI\Resources\" />
+    <Folder Include="PageReplacement.UI\Services\" />
   </ItemGroup>
 
 </Project>

@@ -1,4 +1,4 @@
-namespace OS_page_replacement_project
+namespace OS_page_replacement_project.PageReplacement.UI
 {
     internal static class Program
     {
