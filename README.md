@@ -20,14 +20,14 @@ A Windows Forms application for simulating and visualizing various page replacem
 
 ### Build and Run
 
-1. Clone the repository:```sh
-git clone https://github.com/yourusername/OS-page-replacement-project.git
-    cd OS-page-replacement-project
-```2. Build the project:```sh
-dotnet build
-```3. Run the application:```sh
-dotnet run --project OS-page-replacement-project.csproj
-```
+1. Clone the repository:
+      - `git clone https://github.com/yourusername/OS-page-replacement-project.git`
+      - `cd OS-page-replacement-project`
+3. Build the project:
+    - `dotnet build`
+4. Run the application:sh
+    - `dotnet run --project OS-page-replacement-project.csproj`
+
 ## Usage
 
 - Launch the application.
