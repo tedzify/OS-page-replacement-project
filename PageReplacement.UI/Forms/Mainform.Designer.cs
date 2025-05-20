@@ -49,14 +49,15 @@
             btnPrevious = new Button();
             pnlControls = new Panel();
             panel1 = new Panel();
-            lblHits = new Label();
-            lblHitPercent = new Label();
-            lblMissPercent = new Label();
-            lblMiss = new Label();
-            fieldTotalHit = new TextBox();
-            fieldTotalMiss = new TextBox();
             fieldMissPercent = new TextBox();
             fieldHitPercent = new TextBox();
+            fieldTotalMiss = new TextBox();
+            fieldTotalHit = new TextBox();
+            lblMissPercent = new Label();
+            lblMiss = new Label();
+            lblHitPercent = new Label();
+            lblHits = new Label();
+            btnReset = new Button();
             pnlRefString.SuspendLayout();
             pnlBtnContainer.SuspendLayout();
             gboxSelectedAlgo.SuspendLayout();
@@ -264,7 +265,7 @@
             btnGenerateString.FlatStyle = FlatStyle.Flat;
             btnGenerateString.Font = new Font("Roboto Black", 12F);
             btnGenerateString.ForeColor = Color.White;
-            btnGenerateString.Location = new Point(19, 173);
+            btnGenerateString.Location = new Point(19, 152);
             btnGenerateString.Name = "btnGenerateString";
             btnGenerateString.Size = new Size(214, 29);
             btnGenerateString.TabIndex = 3;
@@ -276,6 +277,7 @@
             pnlControlContainer.Anchor = AnchorStyles.Right;
             pnlControlContainer.BackColor = Color.FromArgb(45, 45, 45);
             pnlControlContainer.BorderStyle = BorderStyle.FixedSingle;
+            pnlControlContainer.Controls.Add(btnReset);
             pnlControlContainer.Controls.Add(btnGenerateString);
             pnlControlContainer.Controls.Add(numSeqLength);
             pnlControlContainer.Controls.Add(lblSeqLength);
@@ -365,87 +367,6 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(255, 194);
             panel1.TabIndex = 7;
-            panel1.Paint += this.panel1_Paint;
-            // 
-            // lblHits
-            // 
-            lblHits.AutoSize = true;
-            lblHits.BackColor = Color.Transparent;
-            lblHits.Font = new Font("Roboto Black", 12F);
-            lblHits.ForeColor = Color.White;
-            lblHits.Location = new Point(17, 35);
-            lblHits.Name = "lblHits";
-            lblHits.Size = new Size(83, 19);
-            lblHits.TabIndex = 2;
-            lblHits.Text = "Total Hits:";
-            // 
-            // lblHitPercent
-            // 
-            lblHitPercent.AutoSize = true;
-            lblHitPercent.BackColor = Color.Transparent;
-            lblHitPercent.Font = new Font("Roboto Black", 12F);
-            lblHitPercent.ForeColor = Color.White;
-            lblHitPercent.Location = new Point(20, 105);
-            lblHitPercent.Name = "lblHitPercent";
-            lblHitPercent.Size = new Size(51, 19);
-            lblHitPercent.TabIndex = 3;
-            lblHitPercent.Text = "Hit %:";
-            lblHitPercent.Click += this.lblHitPercent_Click;
-            // 
-            // lblMissPercent
-            // 
-            lblMissPercent.AutoSize = true;
-            lblMissPercent.BackColor = Color.Transparent;
-            lblMissPercent.Font = new Font("Roboto Black", 12F);
-            lblMissPercent.ForeColor = Color.White;
-            lblMissPercent.Location = new Point(20, 140);
-            lblMissPercent.Name = "lblMissPercent";
-            lblMissPercent.Size = new Size(64, 19);
-            lblMissPercent.TabIndex = 5;
-            lblMissPercent.Text = "Miss %:";
-            // 
-            // lblMiss
-            // 
-            lblMiss.AutoSize = true;
-            lblMiss.BackColor = Color.Transparent;
-            lblMiss.Font = new Font("Roboto Black", 12F);
-            lblMiss.ForeColor = Color.White;
-            lblMiss.Location = new Point(17, 70);
-            lblMiss.Name = "lblMiss";
-            lblMiss.Size = new Size(88, 19);
-            lblMiss.TabIndex = 4;
-            lblMiss.Text = "Total Miss:";
-            // 
-            // fieldTotalHit
-            // 
-            fieldTotalHit.BackColor = Color.FromArgb(64, 64, 64);
-            fieldTotalHit.BorderStyle = BorderStyle.FixedSingle;
-            fieldTotalHit.Font = new Font("Roboto Black", 12F);
-            fieldTotalHit.ForeColor = Color.White;
-            fieldTotalHit.Location = new Point(102, 31);
-            fieldTotalHit.Name = "fieldTotalHit";
-            fieldTotalHit.ReadOnly = true;
-            fieldTotalHit.Size = new Size(132, 27);
-            fieldTotalHit.TabIndex = 6;
-            fieldTotalHit.TabStop = false;
-            fieldTotalHit.Text = "0";
-            fieldTotalHit.TextAlign = HorizontalAlignment.Center;
-            fieldTotalHit.TextChanged += this.fieldTotalHit_TextChanged;
-            // 
-            // fieldTotalMiss
-            // 
-            fieldTotalMiss.BackColor = Color.FromArgb(64, 64, 64);
-            fieldTotalMiss.BorderStyle = BorderStyle.FixedSingle;
-            fieldTotalMiss.Font = new Font("Roboto Black", 12F);
-            fieldTotalMiss.ForeColor = Color.White;
-            fieldTotalMiss.Location = new Point(102, 66);
-            fieldTotalMiss.Name = "fieldTotalMiss";
-            fieldTotalMiss.ReadOnly = true;
-            fieldTotalMiss.Size = new Size(132, 27);
-            fieldTotalMiss.TabIndex = 7;
-            fieldTotalMiss.TabStop = false;
-            fieldTotalMiss.Text = "0";
-            fieldTotalMiss.TextAlign = HorizontalAlignment.Center;
             // 
             // fieldMissPercent
             // 
@@ -476,6 +397,101 @@
             fieldHitPercent.TabStop = false;
             fieldHitPercent.Text = "0";
             fieldHitPercent.TextAlign = HorizontalAlignment.Center;
+            // 
+            // fieldTotalMiss
+            // 
+            fieldTotalMiss.BackColor = Color.FromArgb(64, 64, 64);
+            fieldTotalMiss.BorderStyle = BorderStyle.FixedSingle;
+            fieldTotalMiss.Font = new Font("Roboto Black", 12F);
+            fieldTotalMiss.ForeColor = Color.White;
+            fieldTotalMiss.Location = new Point(102, 66);
+            fieldTotalMiss.Name = "fieldTotalMiss";
+            fieldTotalMiss.ReadOnly = true;
+            fieldTotalMiss.Size = new Size(132, 27);
+            fieldTotalMiss.TabIndex = 7;
+            fieldTotalMiss.TabStop = false;
+            fieldTotalMiss.Text = "0";
+            fieldTotalMiss.TextAlign = HorizontalAlignment.Center;
+            // 
+            // fieldTotalHit
+            // 
+            fieldTotalHit.BackColor = Color.FromArgb(64, 64, 64);
+            fieldTotalHit.BorderStyle = BorderStyle.FixedSingle;
+            fieldTotalHit.Font = new Font("Roboto Black", 12F);
+            fieldTotalHit.ForeColor = Color.White;
+            fieldTotalHit.Location = new Point(102, 31);
+            fieldTotalHit.Name = "fieldTotalHit";
+            fieldTotalHit.ReadOnly = true;
+            fieldTotalHit.Size = new Size(132, 27);
+            fieldTotalHit.TabIndex = 6;
+            fieldTotalHit.TabStop = false;
+            fieldTotalHit.Text = "0";
+            fieldTotalHit.TextAlign = HorizontalAlignment.Center;
+            // 
+            // lblMissPercent
+            // 
+            lblMissPercent.AutoSize = true;
+            lblMissPercent.BackColor = Color.Transparent;
+            lblMissPercent.Font = new Font("Roboto Black", 12F);
+            lblMissPercent.ForeColor = Color.White;
+            lblMissPercent.Location = new Point(20, 140);
+            lblMissPercent.Name = "lblMissPercent";
+            lblMissPercent.Size = new Size(64, 19);
+            lblMissPercent.TabIndex = 5;
+            lblMissPercent.Text = "Miss %:";
+            // 
+            // lblMiss
+            // 
+            lblMiss.AutoSize = true;
+            lblMiss.BackColor = Color.Transparent;
+            lblMiss.Font = new Font("Roboto Black", 12F);
+            lblMiss.ForeColor = Color.White;
+            lblMiss.Location = new Point(17, 70);
+            lblMiss.Name = "lblMiss";
+            lblMiss.Size = new Size(88, 19);
+            lblMiss.TabIndex = 4;
+            lblMiss.Text = "Total Miss:";
+            // 
+            // lblHitPercent
+            // 
+            lblHitPercent.AutoSize = true;
+            lblHitPercent.BackColor = Color.Transparent;
+            lblHitPercent.Font = new Font("Roboto Black", 12F);
+            lblHitPercent.ForeColor = Color.White;
+            lblHitPercent.Location = new Point(20, 105);
+            lblHitPercent.Name = "lblHitPercent";
+            lblHitPercent.Size = new Size(51, 19);
+            lblHitPercent.TabIndex = 3;
+            lblHitPercent.Text = "Hit %:";
+            // 
+            // lblHits
+            // 
+            lblHits.AutoSize = true;
+            lblHits.BackColor = Color.Transparent;
+            lblHits.Font = new Font("Roboto Black", 12F);
+            lblHits.ForeColor = Color.White;
+            lblHits.Location = new Point(17, 35);
+            lblHits.Name = "lblHits";
+            lblHits.Size = new Size(83, 19);
+            lblHits.TabIndex = 2;
+            lblHits.Text = "Total Hits:";
+            // 
+            // btnReset
+            // 
+            btnReset.BackColor = Color.Gray;
+            btnReset.FlatAppearance.BorderColor = Color.Gray;
+            btnReset.FlatAppearance.BorderSize = 0;
+            btnReset.FlatAppearance.MouseDownBackColor = Color.DimGray;
+            btnReset.FlatAppearance.MouseOverBackColor = Color.DarkGray;
+            btnReset.FlatStyle = FlatStyle.Flat;
+            btnReset.Font = new Font("Roboto Black", 12F);
+            btnReset.ForeColor = Color.White;
+            btnReset.Location = new Point(19, 196);
+            btnReset.Name = "btnReset";
+            btnReset.Size = new Size(214, 29);
+            btnReset.TabIndex = 4;
+            btnReset.Text = "RESET";
+            btnReset.UseVisualStyleBackColor = false;
             // 
             // MainForm
             // 
@@ -540,5 +556,6 @@
         private TextBox fieldTotalMiss;
         private TextBox fieldMissPercent;
         private TextBox fieldHitPercent;
+        private Button btnReset;
     }
 }
