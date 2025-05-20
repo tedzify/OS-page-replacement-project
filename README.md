@@ -11,20 +11,6 @@ A Windows Forms application for simulating and visualizing various page replacem
 - **Modular Design**: Core logic separated into algorithms, models, and utilities for easy extension and testing.
 - **Unit Tests**: Includes a test project for validating algorithm correctness.
 
-## Folder Structure
-```
-OS-page-replacement-project/
-├── OS-page-replacement-project/    # Windows Forms application
-│   ├── Algorithms/                 # Page replacement algorithms
-│   ├── Models/                     # Data models
-│   ├── Utilities/                  # Helper utilities
-│   ├── Views/                      # UI components
-│   └── OS-page-replacement-project.csproj
-├── OS-page-replacement-project.Tests/ # Unit test project
-│   ├── Tests/                      # Test cases for algorithms
-│   └── OS-page-replacement-project.Tests.csproj
-└── README.md                       # Project documentation
-```
 ## Getting Started
 
 ### Prerequisites
