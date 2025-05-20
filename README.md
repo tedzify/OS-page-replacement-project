@@ -33,11 +33,7 @@ A Windows Forms application for simulating and visualizing various page replacem
 - Launch the application.
 - Enter the page reference string and number of frames.
 - Select the desired page replacement algorithm.
-- Click "Simulate" to view the step-by-step process and statistics.
-
-## Contributing
-
-Contributions are welcome! Please open issues or submit pull requests for improvements.
+- Click "FIFO", "LRU", "OPTIMAL" buttons to view the step-by-step process and statistics.
 
 ## License
 
