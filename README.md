@@ -25,7 +25,7 @@ A Windows Forms application for simulating and visualizing various page replacem
       - `cd OS-page-replacement-project`
 3. Build the project:
     - `dotnet build`
-4. Run the application:sh
+4. Run the application:
     - `dotnet run --project OS-page-replacement-project.csproj`
 
 ## Usage
