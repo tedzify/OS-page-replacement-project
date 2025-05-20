@@ -12,6 +12,7 @@ A Windows Forms application for simulating and visualizing various page replacem
 - **Unit Tests**: Includes a test project for validating algorithm correctness.
 
 ## Folder Structure
+```
 OS-page-replacement-project/
 ├── OS-page-replacement-project/    # Windows Forms application
 │   ├── Algorithms/                 # Page replacement algorithms
@@ -23,6 +24,7 @@ OS-page-replacement-project/
 │   ├── Tests/                      # Test cases for algorithms
 │   └── OS-page-replacement-project.Tests.csproj
 └── README.md                       # Project documentation
+```
 ## Getting Started
 
 ### Prerequisites
