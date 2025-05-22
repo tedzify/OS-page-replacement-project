@@ -2,15 +2,11 @@
 {
     partial class MainForm
     {
-        /// <summary>
-        ///  Required designer variable.
-        /// </summary>
+        //  Required designer variable.
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        ///  Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        //  Clean up any resources being used.
+        //  true if managed resources should be disposed; otherwise, false.
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -22,16 +18,13 @@
 
         #region Windows Form Designer generated code
 
-        /// <summary>
-        ///  Required method for Designer support - do not modify
-        ///  the contents of this method with the code editor.
-        /// </summary>
+        //  Required method for Designer support - do not modify
+        //  the contents of this method with the code editor.
         private void InitializeComponent()
         {
             pnlVisualization = new Panel();
             lblRefString = new Label();
             pnlRefString = new Panel();
-            flowPanelRefString = new FlowLayoutPanel();
             pnlBtnContainer = new Panel();
             gboxSelectedAlgo = new GroupBox();
             lblSelectedAlgo = new Label();
@@ -44,11 +37,14 @@
             numSeqLength = new NumericUpDown();
             btnGenerateString = new Button();
             pnlControlContainer = new Panel();
+            btnReset = new Button();
             btnNext = new Button();
             btnSkip = new Button();
             btnPrevious = new Button();
-            pnlControls = new Panel();
-            panel1 = new Panel();
+            pnlStepControls = new Panel();
+            pnlStats = new Panel();
+            fieldPageFaults = new TextBox();
+            lblPageFaults = new Label();
             fieldMissPercent = new TextBox();
             fieldHitPercent = new TextBox();
             fieldTotalMiss = new TextBox();
@@ -57,15 +53,13 @@
             lblMiss = new Label();
             lblHitPercent = new Label();
             lblHits = new Label();
-            btnReset = new Button();
-            pnlRefString.SuspendLayout();
             pnlBtnContainer.SuspendLayout();
             gboxSelectedAlgo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)numFrameCount).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numSeqLength).BeginInit();
             pnlControlContainer.SuspendLayout();
-            pnlControls.SuspendLayout();
-            panel1.SuspendLayout();
+            pnlStepControls.SuspendLayout();
+            pnlStats.SuspendLayout();
             SuspendLayout();
             // 
             // pnlVisualization
@@ -96,20 +90,10 @@
             pnlRefString.Anchor = AnchorStyles.Top;
             pnlRefString.BackColor = Color.FromArgb(45, 45, 45);
             pnlRefString.BorderStyle = BorderStyle.FixedSingle;
-            pnlRefString.Controls.Add(flowPanelRefString);
             pnlRefString.Location = new Point(12, 114);
             pnlRefString.Name = "pnlRefString";
             pnlRefString.Size = new Size(895, 77);
             pnlRefString.TabIndex = 4;
-            // 
-            // flowPanelRefString
-            // 
-            flowPanelRefString.Dock = DockStyle.Fill;
-            flowPanelRefString.Location = new Point(0, 0);
-            flowPanelRefString.Name = "flowPanelRefString";
-            flowPanelRefString.Padding = new Padding(3);
-            flowPanelRefString.Size = new Size(893, 75);
-            flowPanelRefString.TabIndex = 0;
             // 
             // pnlBtnContainer
             // 
@@ -141,12 +125,11 @@
             // 
             // lblSelectedAlgo
             // 
-            lblSelectedAlgo.AutoSize = true;
             lblSelectedAlgo.BackColor = Color.Transparent;
             lblSelectedAlgo.Font = new Font("Roboto Black", 20F);
-            lblSelectedAlgo.Location = new Point(114, 11);
+            lblSelectedAlgo.Location = new Point(0, 11);
             lblSelectedAlgo.Name = "lblSelectedAlgo";
-            lblSelectedAlgo.Size = new Size(87, 33);
+            lblSelectedAlgo.Size = new Size(315, 33);
             lblSelectedAlgo.TabIndex = 0;
             lblSelectedAlgo.Text = "NONE";
             lblSelectedAlgo.TextAlign = ContentAlignment.MiddleCenter;
@@ -288,194 +271,6 @@
             pnlControlContainer.Size = new Size(255, 249);
             pnlControlContainer.TabIndex = 0;
             // 
-            // btnNext
-            // 
-            btnNext.BackColor = Color.Gray;
-            btnNext.FlatAppearance.BorderColor = Color.Gray;
-            btnNext.FlatAppearance.BorderSize = 0;
-            btnNext.FlatAppearance.MouseDownBackColor = Color.DimGray;
-            btnNext.FlatAppearance.MouseOverBackColor = Color.DarkGray;
-            btnNext.FlatStyle = FlatStyle.Flat;
-            btnNext.Font = new Font("Roboto Black", 12F);
-            btnNext.ForeColor = Color.White;
-            btnNext.Location = new Point(20, 26);
-            btnNext.Name = "btnNext";
-            btnNext.Size = new Size(214, 29);
-            btnNext.TabIndex = 4;
-            btnNext.Text = "NEXT";
-            btnNext.UseVisualStyleBackColor = false;
-            // 
-            // btnSkip
-            // 
-            btnSkip.BackColor = Color.Gray;
-            btnSkip.FlatAppearance.BorderColor = Color.Gray;
-            btnSkip.FlatAppearance.BorderSize = 0;
-            btnSkip.FlatAppearance.MouseDownBackColor = Color.DimGray;
-            btnSkip.FlatAppearance.MouseOverBackColor = Color.DarkGray;
-            btnSkip.FlatStyle = FlatStyle.Flat;
-            btnSkip.Font = new Font("Roboto Black", 12F);
-            btnSkip.ForeColor = Color.White;
-            btnSkip.Location = new Point(20, 112);
-            btnSkip.Name = "btnSkip";
-            btnSkip.Size = new Size(214, 29);
-            btnSkip.TabIndex = 6;
-            btnSkip.Text = "SKIP";
-            btnSkip.UseVisualStyleBackColor = false;
-            // 
-            // btnPrevious
-            // 
-            btnPrevious.BackColor = Color.Gray;
-            btnPrevious.FlatAppearance.BorderColor = Color.Gray;
-            btnPrevious.FlatAppearance.BorderSize = 0;
-            btnPrevious.FlatAppearance.MouseDownBackColor = Color.DimGray;
-            btnPrevious.FlatAppearance.MouseOverBackColor = Color.DarkGray;
-            btnPrevious.FlatStyle = FlatStyle.Flat;
-            btnPrevious.Font = new Font("Roboto Black", 12F);
-            btnPrevious.ForeColor = Color.White;
-            btnPrevious.Location = new Point(20, 69);
-            btnPrevious.Name = "btnPrevious";
-            btnPrevious.Size = new Size(214, 29);
-            btnPrevious.TabIndex = 5;
-            btnPrevious.Text = "PREVIOUS";
-            btnPrevious.UseVisualStyleBackColor = false;
-            // 
-            // pnlControls
-            // 
-            pnlControls.Anchor = AnchorStyles.Top;
-            pnlControls.BackColor = Color.FromArgb(45, 45, 45);
-            pnlControls.Controls.Add(btnPrevious);
-            pnlControls.Controls.Add(btnSkip);
-            pnlControls.Controls.Add(btnNext);
-            pnlControls.Location = new Point(917, 271);
-            pnlControls.Name = "pnlControls";
-            pnlControls.Size = new Size(255, 174);
-            pnlControls.TabIndex = 6;
-            // 
-            // panel1
-            // 
-            panel1.Anchor = AnchorStyles.Top;
-            panel1.BackColor = Color.FromArgb(45, 45, 45);
-            panel1.Controls.Add(fieldMissPercent);
-            panel1.Controls.Add(fieldHitPercent);
-            panel1.Controls.Add(fieldTotalMiss);
-            panel1.Controls.Add(fieldTotalHit);
-            panel1.Controls.Add(lblMissPercent);
-            panel1.Controls.Add(lblMiss);
-            panel1.Controls.Add(lblHitPercent);
-            panel1.Controls.Add(lblHits);
-            panel1.Location = new Point(917, 455);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(255, 194);
-            panel1.TabIndex = 7;
-            // 
-            // fieldMissPercent
-            // 
-            fieldMissPercent.BackColor = Color.FromArgb(64, 64, 64);
-            fieldMissPercent.BorderStyle = BorderStyle.FixedSingle;
-            fieldMissPercent.Font = new Font("Roboto Black", 12F);
-            fieldMissPercent.ForeColor = Color.White;
-            fieldMissPercent.Location = new Point(102, 136);
-            fieldMissPercent.Name = "fieldMissPercent";
-            fieldMissPercent.ReadOnly = true;
-            fieldMissPercent.Size = new Size(132, 27);
-            fieldMissPercent.TabIndex = 9;
-            fieldMissPercent.TabStop = false;
-            fieldMissPercent.Text = "0";
-            fieldMissPercent.TextAlign = HorizontalAlignment.Center;
-            // 
-            // fieldHitPercent
-            // 
-            fieldHitPercent.BackColor = Color.FromArgb(64, 64, 64);
-            fieldHitPercent.BorderStyle = BorderStyle.FixedSingle;
-            fieldHitPercent.Font = new Font("Roboto Black", 12F);
-            fieldHitPercent.ForeColor = Color.White;
-            fieldHitPercent.Location = new Point(102, 101);
-            fieldHitPercent.Name = "fieldHitPercent";
-            fieldHitPercent.ReadOnly = true;
-            fieldHitPercent.Size = new Size(132, 27);
-            fieldHitPercent.TabIndex = 8;
-            fieldHitPercent.TabStop = false;
-            fieldHitPercent.Text = "0";
-            fieldHitPercent.TextAlign = HorizontalAlignment.Center;
-            // 
-            // fieldTotalMiss
-            // 
-            fieldTotalMiss.BackColor = Color.FromArgb(64, 64, 64);
-            fieldTotalMiss.BorderStyle = BorderStyle.FixedSingle;
-            fieldTotalMiss.Font = new Font("Roboto Black", 12F);
-            fieldTotalMiss.ForeColor = Color.White;
-            fieldTotalMiss.Location = new Point(102, 66);
-            fieldTotalMiss.Name = "fieldTotalMiss";
-            fieldTotalMiss.ReadOnly = true;
-            fieldTotalMiss.Size = new Size(132, 27);
-            fieldTotalMiss.TabIndex = 7;
-            fieldTotalMiss.TabStop = false;
-            fieldTotalMiss.Text = "0";
-            fieldTotalMiss.TextAlign = HorizontalAlignment.Center;
-            // 
-            // fieldTotalHit
-            // 
-            fieldTotalHit.BackColor = Color.FromArgb(64, 64, 64);
-            fieldTotalHit.BorderStyle = BorderStyle.FixedSingle;
-            fieldTotalHit.Font = new Font("Roboto Black", 12F);
-            fieldTotalHit.ForeColor = Color.White;
-            fieldTotalHit.Location = new Point(102, 31);
-            fieldTotalHit.Name = "fieldTotalHit";
-            fieldTotalHit.ReadOnly = true;
-            fieldTotalHit.Size = new Size(132, 27);
-            fieldTotalHit.TabIndex = 6;
-            fieldTotalHit.TabStop = false;
-            fieldTotalHit.Text = "0";
-            fieldTotalHit.TextAlign = HorizontalAlignment.Center;
-            // 
-            // lblMissPercent
-            // 
-            lblMissPercent.AutoSize = true;
-            lblMissPercent.BackColor = Color.Transparent;
-            lblMissPercent.Font = new Font("Roboto Black", 12F);
-            lblMissPercent.ForeColor = Color.White;
-            lblMissPercent.Location = new Point(20, 140);
-            lblMissPercent.Name = "lblMissPercent";
-            lblMissPercent.Size = new Size(64, 19);
-            lblMissPercent.TabIndex = 5;
-            lblMissPercent.Text = "Miss %:";
-            // 
-            // lblMiss
-            // 
-            lblMiss.AutoSize = true;
-            lblMiss.BackColor = Color.Transparent;
-            lblMiss.Font = new Font("Roboto Black", 12F);
-            lblMiss.ForeColor = Color.White;
-            lblMiss.Location = new Point(17, 70);
-            lblMiss.Name = "lblMiss";
-            lblMiss.Size = new Size(88, 19);
-            lblMiss.TabIndex = 4;
-            lblMiss.Text = "Total Miss:";
-            // 
-            // lblHitPercent
-            // 
-            lblHitPercent.AutoSize = true;
-            lblHitPercent.BackColor = Color.Transparent;
-            lblHitPercent.Font = new Font("Roboto Black", 12F);
-            lblHitPercent.ForeColor = Color.White;
-            lblHitPercent.Location = new Point(20, 105);
-            lblHitPercent.Name = "lblHitPercent";
-            lblHitPercent.Size = new Size(51, 19);
-            lblHitPercent.TabIndex = 3;
-            lblHitPercent.Text = "Hit %:";
-            // 
-            // lblHits
-            // 
-            lblHits.AutoSize = true;
-            lblHits.BackColor = Color.Transparent;
-            lblHits.Font = new Font("Roboto Black", 12F);
-            lblHits.ForeColor = Color.White;
-            lblHits.Location = new Point(17, 35);
-            lblHits.Name = "lblHits";
-            lblHits.Size = new Size(83, 19);
-            lblHits.TabIndex = 2;
-            lblHits.Text = "Total Hits:";
-            // 
             // btnReset
             // 
             btnReset.BackColor = Color.Gray;
@@ -493,14 +288,227 @@
             btnReset.Text = "RESET";
             btnReset.UseVisualStyleBackColor = false;
             // 
+            // btnNext
+            // 
+            btnNext.BackColor = Color.Gray;
+            btnNext.FlatAppearance.BorderColor = Color.Gray;
+            btnNext.FlatAppearance.BorderSize = 0;
+            btnNext.FlatAppearance.MouseDownBackColor = Color.DimGray;
+            btnNext.FlatAppearance.MouseOverBackColor = Color.DarkGray;
+            btnNext.FlatStyle = FlatStyle.Flat;
+            btnNext.Font = new Font("Roboto Black", 12F);
+            btnNext.ForeColor = Color.White;
+            btnNext.Location = new Point(20, 30);
+            btnNext.Name = "btnNext";
+            btnNext.Size = new Size(214, 29);
+            btnNext.TabIndex = 4;
+            btnNext.Text = "NEXT";
+            btnNext.UseVisualStyleBackColor = false;
+            // 
+            // btnSkip
+            // 
+            btnSkip.BackColor = Color.Gray;
+            btnSkip.FlatAppearance.BorderColor = Color.Gray;
+            btnSkip.FlatAppearance.BorderSize = 0;
+            btnSkip.FlatAppearance.MouseDownBackColor = Color.DimGray;
+            btnSkip.FlatAppearance.MouseOverBackColor = Color.DarkGray;
+            btnSkip.FlatStyle = FlatStyle.Flat;
+            btnSkip.Font = new Font("Roboto Black", 12F);
+            btnSkip.ForeColor = Color.White;
+            btnSkip.Location = new Point(20, 116);
+            btnSkip.Name = "btnSkip";
+            btnSkip.Size = new Size(214, 29);
+            btnSkip.TabIndex = 6;
+            btnSkip.Text = "SKIP";
+            btnSkip.UseVisualStyleBackColor = false;
+            // 
+            // btnPrevious
+            // 
+            btnPrevious.BackColor = Color.Gray;
+            btnPrevious.FlatAppearance.BorderColor = Color.Gray;
+            btnPrevious.FlatAppearance.BorderSize = 0;
+            btnPrevious.FlatAppearance.MouseDownBackColor = Color.DimGray;
+            btnPrevious.FlatAppearance.MouseOverBackColor = Color.DarkGray;
+            btnPrevious.FlatStyle = FlatStyle.Flat;
+            btnPrevious.Font = new Font("Roboto Black", 12F);
+            btnPrevious.ForeColor = Color.White;
+            btnPrevious.Location = new Point(20, 73);
+            btnPrevious.Name = "btnPrevious";
+            btnPrevious.Size = new Size(214, 29);
+            btnPrevious.TabIndex = 5;
+            btnPrevious.Text = "PREVIOUS";
+            btnPrevious.UseVisualStyleBackColor = false;
+            // 
+            // pnlStepControls
+            // 
+            pnlStepControls.Anchor = AnchorStyles.Top;
+            pnlStepControls.BackColor = Color.FromArgb(45, 45, 45);
+            pnlStepControls.Controls.Add(btnPrevious);
+            pnlStepControls.Controls.Add(btnSkip);
+            pnlStepControls.Controls.Add(btnNext);
+            pnlStepControls.Enabled = false;
+            pnlStepControls.Location = new Point(917, 271);
+            pnlStepControls.Name = "pnlStepControls";
+            pnlStepControls.Size = new Size(255, 174);
+            pnlStepControls.TabIndex = 6;
+            // 
+            // pnlStats
+            // 
+            pnlStats.Anchor = AnchorStyles.Top;
+            pnlStats.BackColor = Color.FromArgb(45, 45, 45);
+            pnlStats.Controls.Add(fieldPageFaults);
+            pnlStats.Controls.Add(lblPageFaults);
+            pnlStats.Controls.Add(fieldMissPercent);
+            pnlStats.Controls.Add(fieldHitPercent);
+            pnlStats.Controls.Add(fieldTotalMiss);
+            pnlStats.Controls.Add(fieldTotalHit);
+            pnlStats.Controls.Add(lblMissPercent);
+            pnlStats.Controls.Add(lblMiss);
+            pnlStats.Controls.Add(lblHitPercent);
+            pnlStats.Controls.Add(lblHits);
+            pnlStats.Location = new Point(917, 455);
+            pnlStats.Name = "pnlStats";
+            pnlStats.Size = new Size(255, 194);
+            pnlStats.TabIndex = 7;
+            // 
+            // fieldPageFaults
+            // 
+            fieldPageFaults.BackColor = Color.FromArgb(64, 64, 64);
+            fieldPageFaults.BorderStyle = BorderStyle.FixedSingle;
+            fieldPageFaults.Font = new Font("Roboto Black", 12F);
+            fieldPageFaults.ForeColor = Color.White;
+            fieldPageFaults.Location = new Point(122, 152);
+            fieldPageFaults.Name = "fieldPageFaults";
+            fieldPageFaults.ReadOnly = true;
+            fieldPageFaults.Size = new Size(114, 27);
+            fieldPageFaults.TabIndex = 11;
+            fieldPageFaults.TabStop = false;
+            fieldPageFaults.TextAlign = HorizontalAlignment.Center;
+            // 
+            // lblPageFaults
+            // 
+            lblPageFaults.AutoSize = true;
+            lblPageFaults.BackColor = Color.Transparent;
+            lblPageFaults.Font = new Font("Roboto Black", 12F);
+            lblPageFaults.ForeColor = Color.White;
+            lblPageFaults.Location = new Point(22, 156);
+            lblPageFaults.Name = "lblPageFaults";
+            lblPageFaults.Size = new Size(100, 19);
+            lblPageFaults.TabIndex = 10;
+            lblPageFaults.Text = "Page Faults:";
+            // 
+            // fieldMissPercent
+            // 
+            fieldMissPercent.BackColor = Color.FromArgb(64, 64, 64);
+            fieldMissPercent.BorderStyle = BorderStyle.FixedSingle;
+            fieldMissPercent.Font = new Font("Roboto Black", 12F);
+            fieldMissPercent.ForeColor = Color.White;
+            fieldMissPercent.Location = new Point(122, 118);
+            fieldMissPercent.Name = "fieldMissPercent";
+            fieldMissPercent.ReadOnly = true;
+            fieldMissPercent.Size = new Size(114, 27);
+            fieldMissPercent.TabIndex = 9;
+            fieldMissPercent.TabStop = false;
+            fieldMissPercent.TextAlign = HorizontalAlignment.Center;
+            // 
+            // fieldHitPercent
+            // 
+            fieldHitPercent.BackColor = Color.FromArgb(64, 64, 64);
+            fieldHitPercent.BorderStyle = BorderStyle.FixedSingle;
+            fieldHitPercent.Font = new Font("Roboto Black", 12F);
+            fieldHitPercent.ForeColor = Color.White;
+            fieldHitPercent.Location = new Point(122, 84);
+            fieldHitPercent.Name = "fieldHitPercent";
+            fieldHitPercent.ReadOnly = true;
+            fieldHitPercent.Size = new Size(114, 27);
+            fieldHitPercent.TabIndex = 8;
+            fieldHitPercent.TabStop = false;
+            fieldHitPercent.TextAlign = HorizontalAlignment.Center;
+            // 
+            // fieldTotalMiss
+            // 
+            fieldTotalMiss.BackColor = Color.FromArgb(64, 64, 64);
+            fieldTotalMiss.BorderStyle = BorderStyle.FixedSingle;
+            fieldTotalMiss.Font = new Font("Roboto Black", 12F);
+            fieldTotalMiss.ForeColor = Color.White;
+            fieldTotalMiss.Location = new Point(122, 50);
+            fieldTotalMiss.Name = "fieldTotalMiss";
+            fieldTotalMiss.ReadOnly = true;
+            fieldTotalMiss.Size = new Size(114, 27);
+            fieldTotalMiss.TabIndex = 7;
+            fieldTotalMiss.TabStop = false;
+            fieldTotalMiss.TextAlign = HorizontalAlignment.Center;
+            // 
+            // fieldTotalHit
+            // 
+            fieldTotalHit.BackColor = Color.FromArgb(64, 64, 64);
+            fieldTotalHit.BorderStyle = BorderStyle.FixedSingle;
+            fieldTotalHit.Font = new Font("Roboto Black", 12F);
+            fieldTotalHit.ForeColor = Color.White;
+            fieldTotalHit.Location = new Point(122, 16);
+            fieldTotalHit.Name = "fieldTotalHit";
+            fieldTotalHit.ReadOnly = true;
+            fieldTotalHit.Size = new Size(114, 27);
+            fieldTotalHit.TabIndex = 6;
+            fieldTotalHit.TabStop = false;
+            fieldTotalHit.TextAlign = HorizontalAlignment.Center;
+            // 
+            // lblMissPercent
+            // 
+            lblMissPercent.AutoSize = true;
+            lblMissPercent.BackColor = Color.Transparent;
+            lblMissPercent.Font = new Font("Roboto Black", 12F);
+            lblMissPercent.ForeColor = Color.White;
+            lblMissPercent.Location = new Point(22, 122);
+            lblMissPercent.Name = "lblMissPercent";
+            lblMissPercent.Size = new Size(64, 19);
+            lblMissPercent.TabIndex = 5;
+            lblMissPercent.Text = "Miss %:";
+            // 
+            // lblMiss
+            // 
+            lblMiss.AutoSize = true;
+            lblMiss.BackColor = Color.Transparent;
+            lblMiss.Font = new Font("Roboto Black", 12F);
+            lblMiss.ForeColor = Color.White;
+            lblMiss.Location = new Point(19, 54);
+            lblMiss.Name = "lblMiss";
+            lblMiss.Size = new Size(88, 19);
+            lblMiss.TabIndex = 4;
+            lblMiss.Text = "Total Miss:";
+            // 
+            // lblHitPercent
+            // 
+            lblHitPercent.AutoSize = true;
+            lblHitPercent.BackColor = Color.Transparent;
+            lblHitPercent.Font = new Font("Roboto Black", 12F);
+            lblHitPercent.ForeColor = Color.White;
+            lblHitPercent.Location = new Point(22, 88);
+            lblHitPercent.Name = "lblHitPercent";
+            lblHitPercent.Size = new Size(51, 19);
+            lblHitPercent.TabIndex = 3;
+            lblHitPercent.Text = "Hit %:";
+            // 
+            // lblHits
+            // 
+            lblHits.AutoSize = true;
+            lblHits.BackColor = Color.Transparent;
+            lblHits.Font = new Font("Roboto Black", 12F);
+            lblHits.ForeColor = Color.White;
+            lblHits.Location = new Point(19, 20);
+            lblHits.Name = "lblHits";
+            lblHits.Size = new Size(83, 19);
+            lblHits.TabIndex = 2;
+            lblHits.Text = "Total Hits:";
+            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(64, 64, 64);
             ClientSize = new Size(1184, 661);
-            Controls.Add(panel1);
-            Controls.Add(pnlControls);
+            Controls.Add(pnlStats);
+            Controls.Add(pnlStepControls);
             Controls.Add(pnlVisualization);
             Controls.Add(lblRefString);
             Controls.Add(pnlRefString);
@@ -510,17 +518,15 @@
             Name = "MainForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Page Replacement Algorithm";
-            pnlRefString.ResumeLayout(false);
             pnlBtnContainer.ResumeLayout(false);
             gboxSelectedAlgo.ResumeLayout(false);
-            gboxSelectedAlgo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)numFrameCount).EndInit();
             ((System.ComponentModel.ISupportInitialize)numSeqLength).EndInit();
             pnlControlContainer.ResumeLayout(false);
             pnlControlContainer.PerformLayout();
-            pnlControls.ResumeLayout(false);
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
+            pnlStepControls.ResumeLayout(false);
+            pnlStats.ResumeLayout(false);
+            pnlStats.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -542,12 +548,11 @@
         private Label lblSeqLength;
         private NumericUpDown numFrameCount;
         private Label lblFrameCount;
-        private FlowLayoutPanel flowPanelRefString;
         private Button btnNext;
         private Button btnSkip;
         private Button btnPrevious;
-        private Panel pnlControls;
-        private Panel panel1;
+        private Panel pnlStepControls;
+        private Panel pnlStats;
         private Label lblHitPercent;
         private Label lblHits;
         private Label lblMissPercent;
@@ -557,5 +562,7 @@
         private TextBox fieldMissPercent;
         private TextBox fieldHitPercent;
         private Button btnReset;
+        private TextBox fieldPageFaults;
+        private Label lblPageFaults;
     }
 }
