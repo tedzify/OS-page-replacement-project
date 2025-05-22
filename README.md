@@ -11,18 +11,6 @@ A Windows Forms application for simulating and visualizing various page replacem
 - **Modular Design**: Core logic separated into algorithms, models, and utilities for easy extension and testing.
 - **Unit Tests**: Includes a test project for validating algorithm correctness.
 
-## Folder Structure
-OS-page-replacement-project/
-├── OS-page-replacement-project/    # Windows Forms application
-│   ├── Algorithms/                 # Page replacement algorithms
-│   ├── Models/                     # Data models
-│   ├── Utilities/                  # Helper utilities
-│   ├── Views/                      # UI components
-│   └── OS-page-replacement-project.csproj
-├── OS-page-replacement-project.Tests/ # Unit test project
-│   ├── Tests/                      # Test cases for algorithms
-│   └── OS-page-replacement-project.Tests.csproj
-└── README.md                       # Project documentation
 ## Getting Started
 
 ### Prerequisites
@@ -32,24 +20,20 @@ OS-page-replacement-project/
 
 ### Build and Run
 
-1. Clone the repository:```sh
-git clone https://github.com/yourusername/OS-page-replacement-project.git
-    cd OS-page-replacement-project
-```2. Build the project:```sh
-dotnet build
-```3. Run the application:```sh
-dotnet run --project OS-page-replacement-project.csproj
-```
+1. Clone the repository:
+      - `git clone https://github.com/yourusername/OS-page-replacement-project.git`
+      - `cd OS-page-replacement-project`
+3. Build the project:
+    - `dotnet build`
+4. Run the application:
+    - `dotnet run --project OS-page-replacement-project.csproj`
+
 ## Usage
 
 - Launch the application.
 - Enter the page reference string and number of frames.
 - Select the desired page replacement algorithm.
-- Click "Simulate" to view the step-by-step process and statistics.
-
-## Contributing
-
-Contributions are welcome! Please open issues or submit pull requests for improvements.
+- Click "FIFO", "LRU", "OPTIMAL" buttons to view the step-by-step process and statistics.
 
 ## License
 
