@@ -23,6 +23,8 @@
         private void InitializeComponent()
         {
             pnlVisualization = new Panel();
+            tableLayoutPanel1 = new TableLayoutPanel();
+            label1 = new Label();
             lblRefString = new Label();
             pnlRefString = new Panel();
             pnlBtnContainer = new Panel();
@@ -38,10 +40,6 @@
             btnGenerateString = new Button();
             pnlControlContainer = new Panel();
             btnReset = new Button();
-            btnNext = new Button();
-            btnSkip = new Button();
-            btnPrevious = new Button();
-            pnlStepControls = new Panel();
             pnlStats = new Panel();
             fieldPageFaults = new TextBox();
             lblPageFaults = new Label();
@@ -53,12 +51,13 @@
             lblMiss = new Label();
             lblHitPercent = new Label();
             lblHits = new Label();
+            pnlVisualization.SuspendLayout();
+            tableLayoutPanel1.SuspendLayout();
             pnlBtnContainer.SuspendLayout();
             gboxSelectedAlgo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)numFrameCount).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numSeqLength).BeginInit();
             pnlControlContainer.SuspendLayout();
-            pnlStepControls.SuspendLayout();
             pnlStats.SuspendLayout();
             SuspendLayout();
             // 
@@ -66,10 +65,38 @@
             // 
             pnlVisualization.Anchor = AnchorStyles.Top;
             pnlVisualization.BackColor = Color.FromArgb(45, 45, 45);
+            pnlVisualization.Controls.Add(tableLayoutPanel1);
             pnlVisualization.Location = new Point(12, 197);
             pnlVisualization.Name = "pnlVisualization";
             pnlVisualization.Size = new Size(895, 452);
             pnlVisualization.TabIndex = 5;
+            // 
+            // tableLayoutPanel1
+            // 
+            tableLayoutPanel1.ColumnCount = 2;
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel1.Controls.Add(label1, 0, 0);
+            tableLayoutPanel1.Location = new Point(750, 313);
+            tableLayoutPanel1.Name = "tableLayoutPanel1";
+            tableLayoutPanel1.RowCount = 2;
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tableLayoutPanel1.Size = new Size(124, 124);
+            tableLayoutPanel1.TabIndex = 0;
+            // 
+            // label1
+            // 
+            label1.BorderStyle = BorderStyle.FixedSingle;
+            label1.Dock = DockStyle.Fill;
+            label1.Font = new Font("Roboto Black", 12F);
+            label1.ForeColor = Color.White;
+            label1.Location = new Point(3, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(56, 62);
+            label1.TabIndex = 0;
+            label1.Text = "-";
+            label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblRefString
             // 
@@ -288,70 +315,6 @@
             btnReset.Text = "RESET";
             btnReset.UseVisualStyleBackColor = false;
             // 
-            // btnNext
-            // 
-            btnNext.BackColor = Color.Gray;
-            btnNext.FlatAppearance.BorderColor = Color.Gray;
-            btnNext.FlatAppearance.BorderSize = 0;
-            btnNext.FlatAppearance.MouseDownBackColor = Color.DimGray;
-            btnNext.FlatAppearance.MouseOverBackColor = Color.DarkGray;
-            btnNext.FlatStyle = FlatStyle.Flat;
-            btnNext.Font = new Font("Roboto Black", 12F);
-            btnNext.ForeColor = Color.White;
-            btnNext.Location = new Point(20, 30);
-            btnNext.Name = "btnNext";
-            btnNext.Size = new Size(214, 29);
-            btnNext.TabIndex = 4;
-            btnNext.Text = "NEXT";
-            btnNext.UseVisualStyleBackColor = false;
-            // 
-            // btnSkip
-            // 
-            btnSkip.BackColor = Color.Gray;
-            btnSkip.FlatAppearance.BorderColor = Color.Gray;
-            btnSkip.FlatAppearance.BorderSize = 0;
-            btnSkip.FlatAppearance.MouseDownBackColor = Color.DimGray;
-            btnSkip.FlatAppearance.MouseOverBackColor = Color.DarkGray;
-            btnSkip.FlatStyle = FlatStyle.Flat;
-            btnSkip.Font = new Font("Roboto Black", 12F);
-            btnSkip.ForeColor = Color.White;
-            btnSkip.Location = new Point(20, 116);
-            btnSkip.Name = "btnSkip";
-            btnSkip.Size = new Size(214, 29);
-            btnSkip.TabIndex = 6;
-            btnSkip.Text = "SKIP";
-            btnSkip.UseVisualStyleBackColor = false;
-            // 
-            // btnPrevious
-            // 
-            btnPrevious.BackColor = Color.Gray;
-            btnPrevious.FlatAppearance.BorderColor = Color.Gray;
-            btnPrevious.FlatAppearance.BorderSize = 0;
-            btnPrevious.FlatAppearance.MouseDownBackColor = Color.DimGray;
-            btnPrevious.FlatAppearance.MouseOverBackColor = Color.DarkGray;
-            btnPrevious.FlatStyle = FlatStyle.Flat;
-            btnPrevious.Font = new Font("Roboto Black", 12F);
-            btnPrevious.ForeColor = Color.White;
-            btnPrevious.Location = new Point(20, 73);
-            btnPrevious.Name = "btnPrevious";
-            btnPrevious.Size = new Size(214, 29);
-            btnPrevious.TabIndex = 5;
-            btnPrevious.Text = "PREVIOUS";
-            btnPrevious.UseVisualStyleBackColor = false;
-            // 
-            // pnlStepControls
-            // 
-            pnlStepControls.Anchor = AnchorStyles.Top;
-            pnlStepControls.BackColor = Color.FromArgb(45, 45, 45);
-            pnlStepControls.Controls.Add(btnPrevious);
-            pnlStepControls.Controls.Add(btnSkip);
-            pnlStepControls.Controls.Add(btnNext);
-            pnlStepControls.Enabled = false;
-            pnlStepControls.Location = new Point(917, 271);
-            pnlStepControls.Name = "pnlStepControls";
-            pnlStepControls.Size = new Size(255, 174);
-            pnlStepControls.TabIndex = 6;
-            // 
             // pnlStats
             // 
             pnlStats.Anchor = AnchorStyles.Top;
@@ -366,7 +329,7 @@
             pnlStats.Controls.Add(lblMiss);
             pnlStats.Controls.Add(lblHitPercent);
             pnlStats.Controls.Add(lblHits);
-            pnlStats.Location = new Point(917, 455);
+            pnlStats.Location = new Point(917, 267);
             pnlStats.Name = "pnlStats";
             pnlStats.Size = new Size(255, 194);
             pnlStats.TabIndex = 7;
@@ -508,7 +471,6 @@
             BackColor = Color.FromArgb(64, 64, 64);
             ClientSize = new Size(1184, 661);
             Controls.Add(pnlStats);
-            Controls.Add(pnlStepControls);
             Controls.Add(pnlVisualization);
             Controls.Add(lblRefString);
             Controls.Add(pnlRefString);
@@ -518,13 +480,14 @@
             Name = "MainForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Page Replacement Algorithm";
+            pnlVisualization.ResumeLayout(false);
+            tableLayoutPanel1.ResumeLayout(false);
             pnlBtnContainer.ResumeLayout(false);
             gboxSelectedAlgo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)numFrameCount).EndInit();
             ((System.ComponentModel.ISupportInitialize)numSeqLength).EndInit();
             pnlControlContainer.ResumeLayout(false);
             pnlControlContainer.PerformLayout();
-            pnlStepControls.ResumeLayout(false);
             pnlStats.ResumeLayout(false);
             pnlStats.PerformLayout();
             ResumeLayout(false);
@@ -548,10 +511,6 @@
         private Label lblSeqLength;
         private NumericUpDown numFrameCount;
         private Label lblFrameCount;
-        private Button btnNext;
-        private Button btnSkip;
-        private Button btnPrevious;
-        private Panel pnlStepControls;
         private Panel pnlStats;
         private Label lblHitPercent;
         private Label lblHits;
@@ -564,5 +523,7 @@
         private Button btnReset;
         private TextBox fieldPageFaults;
         private Label lblPageFaults;
+        private TableLayoutPanel tableLayoutPanel1;
+        private Label label1;
     }
 }

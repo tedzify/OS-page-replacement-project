@@ -27,7 +27,6 @@
             // Set initial enabled/disabled status of panels and buttons.
             pnlBtnContainer.Enabled = false;
             pnlStats.Enabled = false;
-            pnlStepControls.Enabled = false;
             btnReset.Enabled = false;
 
             // Register event handlers for button clicks.
@@ -36,9 +35,6 @@
             btnFIFO.Click += AlgorithmButton_Click;
             btnLRU.Click += AlgorithmButton_Click;
             btnOptimal.Click += AlgorithmButton_Click;
-            btnNext.Click += BtnNext_Click;
-            btnPrevious.Click += BtnPrevious_Click;
-            btnSkip.Click += BtnSkip_Click;
         }
 
         // BtnGenerateString_Click generates a random reference sequence and enables UI controls.
@@ -62,7 +58,6 @@
             // 4) Enable algorithm buttons and step controls, disable regenerate button.
             pnlBtnContainer.Enabled = true;
             pnlStats.Enabled = true;
-            pnlStepControls.Enabled = true;
             btnReset.Enabled = true;
         }
 
@@ -71,7 +66,6 @@
         {
             pnlBtnContainer.Enabled = false;
             pnlStats.Enabled = false;
-            pnlStepControls.Enabled = false;
             btnReset.Enabled = false;
             btnGenerateString.Enabled = true;
 
@@ -100,23 +94,6 @@
             }
         }
 
-        // BtnNext_Click will step to the next event in the simulation.
-        private void BtnNext_Click(object? sender, EventArgs e)
-        {
-            // Implementation pending.
-        }
-
-        // BtnPrevious_Click will step back to the previous event in the simulation.
-        private void BtnPrevious_Click(object? sender, EventArgs e)
-        {
-            // Implementation pending.
-        }
-
-        // BtnSkip_Click will perform a skip operation in the simulation.
-        private void BtnSkip_Click(object? sender, EventArgs e)
-        {
-            // Implementation pending.
-        }
 
         // ────── Utility for sequence generation ──────
         // RandomSequenceGenerator generates a shuffled sequence of integers.
